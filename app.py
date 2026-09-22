@@ -101,7 +101,7 @@ data_source = st.sidebar.radio("Fonte dos Dados:", ["Demonstração", "Google Sh
 df = None
 
 if data_source == "Google Sheets":
-    gsheets_url = st.sidebar.text_input("Link CSV:")
+    gsheets_url = st.sidebar.text_input("https://docs.google.com/spreadsheets/d/e/2PACX-1vQky1KxFglGq0Iee6y3EjzqY9wdNCqNQ2I23hwcUdP6u9mO2tL45agP3UwhSJRuqCKN39gNkOl1hWos/pub?gid=1241429519&single=true&output=csv")
     if gsheets_url: df = load_data(gsheets_url)
 elif data_source == "Upload":
     uploaded_file = st.sidebar.file_uploader("Upload", type=["xlsx", "csv"])
